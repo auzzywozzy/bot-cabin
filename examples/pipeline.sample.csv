@@ -1,0 +1,11 @@
+stage,sent_date,replied_date,demo_requested_date,call_booked_date,offer,channel
+sent,2026-01-05,,,,Offer A,Email
+replied,2026-01-05,2026-01-06,,,Offer A,Email
+demo_requested,2026-01-06,2026-01-07,2026-01-08,,Offer B,Email
+call_booked,2026-01-07,2026-01-08,2026-01-09,2026-01-12,Offer B,Chat
+sent,2026-01-12,,,,Offer C,Chat
+sent,2026-01-13,,,,Offer A,Chat
+replied,2026-01-13,2026-01-14,,,Offer C,Email
+drafted,,,,,Offer A,Email
+drafted,,,,,Offer B,Email
+closed_lost,2026-01-02,2026-01-03,,,Offer C,Email

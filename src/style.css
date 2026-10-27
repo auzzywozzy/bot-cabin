@@ -1,0 +1,44 @@
+html,body{margin:0;height:100%;overflow:hidden;background:#1b1420;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+#app{position:fixed;inset:0}
+#labels{position:fixed;inset:0;pointer-events:none}
+.tag{position:absolute;transform:translate(-50%,-100%);white-space:nowrap;text-align:center}
+.tag .name{display:inline-block;padding:3px 10px;border-radius:12px;color:#fff;font-weight:700;font-size:13px;box-shadow:0 2px 8px rgba(0,0,0,.35)}
+.tag .task{display:block;margin:4px auto 0;max-width:260px;white-space:normal;padding:4px 9px;border-radius:8px;background:rgba(255,250,240,.92);color:#3a2a20;font-size:12px;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.tag .task:empty{display:none}
+#hud{position:fixed;top:14px;left:14px;min-width:280px;max-width:360px;background:rgba(28,20,30,.78);backdrop-filter:blur(6px);color:#f5e9dc;border-radius:12px;padding:12px 14px;font-size:13px;box-shadow:0 4px 18px rgba(0,0,0,.4)}
+.hud-title{font-weight:800;font-size:15px;margin-bottom:8px;display:flex;justify-content:space-between}
+#clock{font-weight:400;opacity:.7;font-size:12px}
+.row{padding:7px 0;border-top:1px solid rgba(255,255,255,.1)}
+.row .who{font-weight:700}
+.pill{display:inline-block;margin-left:6px;padding:1px 8px;border-radius:10px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+.pill.working{background:#3fa66b}.pill.meeting{background:#3f7bd6}.pill.idle{background:#8a7a8f}.pill.break{background:#d9872f}
+.row .t{opacity:.9;margin-top:3px}
+.row .u{opacity:.6;font-size:11px;margin-top:2px}
+.hud-foot{opacity:.5;font-size:11px;margin-top:6px}
+
+html,body{touch-action:none;overscroll-behavior:none;-webkit-user-select:none;user-select:none}
+#app canvas{display:block;touch-action:none}
+#fade{position:fixed;inset:0;background:#120d14;opacity:0;pointer-events:none;transition:opacity .22s ease}
+#fade.on{opacity:1}
+#bottombar{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(16px + env(safe-area-inset-bottom));display:flex;gap:10px;align-items:center;z-index:5}
+#modebar{display:flex;padding:4px;border-radius:999px;background:rgba(28,20,30,.78);backdrop-filter:blur(8px);box-shadow:0 6px 22px rgba(0,0,0,.4)}
+#modebar button{appearance:none;border:0;background:transparent;color:#f5e9dc;font:700 14px/1 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding:11px 20px;border-radius:999px;cursor:pointer;letter-spacing:.02em;transition:background .2s,color .2s;min-width:96px}
+#modebar button.on{background:#f3d9b1;color:#2a1d16;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+#modebar button:not(.on):hover{background:rgba(255,255,255,.08)}
+#zoomchip{appearance:none;border:0;width:46px;height:46px;border-radius:50%;background:rgba(28,20,30,.78);backdrop-filter:blur(8px);color:#f3d9b1;font:800 13px/1 system-ui,-apple-system,sans-serif;box-shadow:0 6px 22px rgba(0,0,0,.4);cursor:pointer;display:none}
+body.inside #zoomchip{display:block}
+#spots{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(78px + env(safe-area-inset-bottom));display:none;gap:6px;max-width:calc(100vw - 20px);overflow-x:auto;scrollbar-width:none;padding:2px 4px;z-index:5}
+#spots::-webkit-scrollbar{display:none}
+body.inside #spots{display:flex}
+#spots button{appearance:none;border:0;white-space:nowrap;background:rgba(255,250,240,.88);color:#3a2a20;font:600 12px/1 system-ui,-apple-system,sans-serif;padding:8px 12px;border-radius:999px;box-shadow:0 2px 8px rgba(0,0,0,.25);cursor:pointer}
+#spots button:hover{background:#fff}
+#walkmark{position:fixed;width:34px;height:34px;margin:-17px 0 0 -17px;border:2px solid rgba(255,245,225,.9);border-radius:50%;pointer-events:none;opacity:0;transform:scale(.6);transition:opacity .35s,transform .35s}
+@media (max-width:600px){
+  #hud{top:calc(8px + env(safe-area-inset-top));left:8px;right:8px;min-width:0;max-width:none;padding:9px 11px;font-size:12px}
+  .hud-title{font-size:14px;margin-bottom:4px}
+  .row{padding:5px 0}
+  .row .u{display:none}
+  .hud-foot{display:none}
+  #modebar button{padding:11px 16px;min-width:84px}
+  .tag .task{max-width:180px;font-size:11px}
+}
