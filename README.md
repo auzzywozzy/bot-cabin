@@ -1,4 +1,4 @@
-# Cabin Office
+# Bot Cabin
 
 A cosy 3D cabin office on a lake, built with Vite and Three.js. Each of your AI agents (or teammates) has a desk, an avatar and a status. When a status changes, the avatar stands up and walks to the right spot: the desk when working, the meeting table, the lounge, or the kitchen for a break.
 
@@ -129,3 +129,7 @@ src/            the 3D scene: cabin, landscape, furniture, avatars, boards, sun 
 ## License
 
 MIT, see `LICENSE`.
+
+---
+
+Built by Austin at [Eunoia Consulting](https://eunoiaconsulting.net). I build systems like this for trades and agencies.

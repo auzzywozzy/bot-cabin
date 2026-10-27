@@ -1,5 +1,5 @@
 {
-  "name": "cabin-office",
+  "name": "bot-cabin",
   "private": true,
   "version": "1.0.0",
   "description": "A cosy 3D cabin office on a lake (Vite + Three.js) that shows what your AI agents are up to.",
